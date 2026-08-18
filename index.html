@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SeyahatEt</title>
+    <script
+      src="https://kit.fontawesome.com/296741d573.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sayfa">
+      <div class="navbar">
+        <div class="navbar-left">
+          <div class="firma">
+            <i class="fa-solid fa-plane logo"></i>
+            <span class="firma_adi">FlyAway</span>
+          </div>
+
+          <div class="navbar-mid">
+            <ul class="nav-links">
+              <li class="liste">
+                <a href="index.html">Uçuşlar</a>
+              </li>
+
+              <li class="liste">
+                <a href="oteller.html">Oteller</a>
+              </li>
+
+              <li class="liste">
+                <a href="arac-kirala.html">Araç Kirala</a>
+              </li>
+
+              <li class="liste">
+                <a href="kampanyalar.html">Kampanyalar</a>
+              </li>
+
+              <li class="liste">
+                <a href="yardim.html">Yardım</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-right">
+          <div class="diller">
+            <i class="fa-solid fa-globe"></i>
+            <span class="dil">Tr</span>
+          </div>
+          <i class="fa-regular fa-bell"></i>
+          <span class="kullanici">A.K</span>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="main-top">
+          <div class="yazilar">
+            <div class="yazilar-top">
+              <h1>Dünyaya uçmanın tam zamanı!</h1>
+              <i class="fa-solid fa-plane mini_logo"></i>
+            </div>
+            <div class="yazilar-bottom">
+              <h4>
+                Uygun fiyatlı uçuşları keşfedin,seyahiyiniz şimdi planalayın.
+              </h4>
+            </div>
+          </div>
+          <div class="bilet-al">
+            <div class="ucus-tipi">
+              <button>Gidiş Dönüş</button>
+              <button>Tek Yön</button>
+              <button>Çoklu uçuş</button>
+            </div>
+            <div class="form">
+              <input type="text" placeholder="Nereden" />
+              <input type="text" placeholder="Nereye" />
+              <input type="date" placeholder="Gidiş Tarihi" />
+              <input type="date" placeholder="Dönüş  Tarihi" />
+              <input
+                list="yolcu"
+                id="yolcu"
+                name="yolcu"
+                placeholder="Yolcu/Sınıf"
+              />
+
+              <select id="yolcu">
+                <option value="İstanbul">a</option>
+                <option value="Ankara">b</option>
+                <option value="İzmir">c</option>
+              </select>
+            </div>
+            <div class="ekler"></div>
+          </div>
+        </div>
+
+        <div class="main-mid">
+          <div class="kart1">
+            <div class="kart1-top">
+              <h5 class="kart-baslik">Popüler Destinasyonlar</h5>
+              <button class="kart-btn">Tümünü Gör</button>
+            </div>
+            <div class="kart1-icerik">
+              <ul>
+                <li>
+                  <div class="destinasyonlar">
+                    <img
+                      src="images/eyfel_kulesi.jpg"
+                      class="destinasyonlar-img"
+                    />
+                    <div class="aciklama">
+                      <span class="sehir">Paris</span>
+                      <span class="ulke">Fransa</span>
+                    </div>
+                  </div>
+                  <div class="ucret">
+                    <span>Baslangıç</span>
+                    <span class="euro_birimi">129</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="destinasyonlar">
+                    <img
+                      src="images/londra_saat_kulesi.jpg"
+                      class="destinasyonlar-img"
+                    />
+                    <div class="aciklama">
+                      <span class="sehir">Londra</span>
+                      <span class="ulke">İngiltere</span>
+                    </div>
+                  </div>
+                  <div class="ucret">
+                    <span>Baslangıç</span>
+                    <span class="euro_birimi">149</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="destinasyonlar">
+                    <img src="images/dubai.jpg" class="destinasyonlar-img" />
+                    <div class="aciklama">
+                      <span class="sehir">Dubai</span>
+                      <span class="ulke">BAE</span>
+                    </div>
+                  </div>
+                  <div class="ucret">
+                    <span>Baslangıç</span>
+                    <span class="euro_birimi">259</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="destinasyonlar">
+                    <img src="images/kolezyum.jpg" class="destinasyonlar-img" />
+                    <div class="aciklama">
+                      <span class="sehir">Roma</span>
+                      <span class="ulke">İtalya</span>
+                    </div>
+                  </div>
+                  <div class="ucret">
+                    <span>Baslangıç</span>
+                    <span class="euro_birimi">119</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="kart2">
+            <div class="kart2-top">
+              <div class="kart2-top-sol">
+                <div class="reklam">
+                  <h2 class="kart2-baslik">
+                    İstanbul <i class="fa-solid fa-arrow-right"></i> Dubai
+                  </h2>
+                  <span class="kart2-top-span">
+                    Özel Fırsatlar Seni Bekliyor</span
+                  >
+                </div>
+                <button class="kart2-btn1">%20'ye varan indirim</button>
+              </div>
+              <div class="kart2-top-sağ">
+                <i class="fa-solid fa-chevron-left kart2-ikons"></i>
+                <i class="fa-solid fa-angle-right kart2-ikons"></i>
+              </div>
+            </div>
+            <div class="kart2-bottom">
+              <span class="fiyat-etiketi">Başlangıç</span>
+              <span class="kart2-fyt">199</span>
+
+              <div class="kart2-btn2">
+                <span>Hemen Keşfet</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="kart3">
+            <div class="kart3-top">
+              <h5 class="kart-baslik">En Uygun Fiyatlar</h5>
+              <button class="kart-btn">Tümünü Gör</button>
+            </div>
+            <div class="kart3-icerik">
+              <ul class="kart3-liste">
+                <li>
+                  <div class="destinasyonlar">
+                    <img src="logolar/klm.png" class="kart3-img" />
+                    <div class="kart3-ucuslar">
+                      <span class="yollar"
+                        >İstanbul
+                        <i class="fa-solid fa-arrow-right"></i> Amsterdam</span
+                      >
+                      <span class="kart3-tarih-tip">20 Haz-Tek Yön</span>
+                    </div>
+                  </div>
+                  <div class="ucret">
+                    <span class="kart3-fiyat">€99</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="destinasyonlar">
+                    <img src="logolar/lufsana.jpg" class="kart3-img" />
+                    <div class="kart3-ucuslar">
+                      <span class="yollar"
+                        >Ankara
+                        <i class="fa-solid fa-arrow-right"></i> Berlin</span
+                      >
+                      <span class="kart3-tarih-tip">18 Haz-Gidiş Dönüş</span>
+                    </div>
+                  </div>
+                  <div class="ucret">
+                    <span class="kart3-fiyat">€129</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="destinasyonlar">
+                    <img src="logolar/v.png" class="kart3-img" />
+                    <div class="kart3-ucuslar">
+                      <span class="yollar"
+                        >İzmir
+                        <i class="fa-solid fa-arrow-right"></i>Barselona</span
+                      >
+                      <span class="kart3-tarih-tip">22 Haz-Tek yön</span>
+                    </div>
+                  </div>
+                  <div class="ucret">
+                    <span class="kart3-fiyat">€149</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="destinasyonlar">
+                    <img src="logolar/sas.png" class="kart3-img" />
+                    <div class="kart3-ucuslar">
+                      <span class="yollar"
+                        >Antalya
+                        <i class="fa-solid fa-arrow-right"></i> Kopenhang</span
+                      >
+                      <span class="kart3-tarih-tip">25 Haz-Gidiş-Dönüşn</span>
+                    </div>
+                  </div>
+                  <div class="ucret">
+                    <span class="kart3-fiyat">€169</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="main-advantages">
+          <ul class="advantages-ul">
+            <li class="advantages-list">
+              <a href="#" class="advantages-link">
+                <i class="fa-solid fa-shield advantages-icon"></i>
+
+                <div class="advantages aciklama">
+                  <span class="advantages-baslik">Güvenli Ödeme</span>
+                  <span class="advantages-metin">SSL ile güvende</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="advantages-link">
+                <i class="fa-solid fa-ranking-star advantages-icon"></i>
+
+                <div class="advantages aciklama">
+                  <span class="advantages-baslik">En Uygun Fiyat</span>
+                  <span class="advantages-metin">n iyi fiyat garantisi</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="advantages-link">
+                <i class="fa-solid fa-headset advantages-icon"></i>
+
+                <div class="advantages aciklama">
+                  <span class="advantages-baslik">7/24 Destek</span>
+                  <span class="advantages-metin">Her Zaman Yanınızdayız!</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="advantages-link">
+                <i class="fa-regular fa-calendar-minus advantages-icon"></i>
+
+                <div class="advantages aciklama">
+                  <span class="advantages-baslik">Ücretsiz İptal</span>
+                  <span class="advantages-metin">Seçili Uçuşlarda</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-airlines"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
