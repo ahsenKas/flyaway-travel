@@ -1,25 +1,40 @@
-.sayfa {
-  box-sizing: border-box;
-  background-color: #f5f5f5;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.body {
+* {
+  box-sizing: border-box;
 }
+
+body {
+  overflow-x: hidden;
+}
+
+.sayfa {
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
 
 .navbar {
   display: flex;
-  border: 2px solid brown;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 30px;
   background-color: white;
-  box-sizing: border-box;
 }
 
 .navbar-left {
   display: flex;
   align-items: center;
   gap: 60px;
-
   margin: 0;
 }
 
@@ -49,10 +64,11 @@
   display: flex;
   align-items: center;
   gap: 8px;
-
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
+
 ul {
   list-style: none;
   margin: 0;
@@ -62,15 +78,13 @@ ul {
 .nav-links .liste a {
   display: flex;
   align-items: center;
-
   padding: 10px 14px;
-
   color: black;
   font-size: 15px;
   font-weight: 600;
-
   border-radius: 8px;
 }
+
 .liste.active {
   background-color: #f1eafa;
   border-bottom: 2px solid purple;
@@ -81,9 +95,6 @@ ul {
   background-color: #f1eafa;
 }
 
-.nav-links .liste.active {
-  border-bottom: 2px solid purple;
-}
 a {
   text-decoration: none;
   color: black;
@@ -96,11 +107,9 @@ a {
 
 .navbar-right {
   width: auto;
-
   display: flex;
   align-items: center;
   gap: 25px;
-
   padding: 0;
   font-size: 17px;
 }
@@ -114,23 +123,22 @@ a {
 .kullanici {
   width: 35px;
   height: 35px;
-
   border: 2px solid purple;
   border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   color: white;
   background-color: purple;
-
   font-size: 13px;
 }
 
+/* MAIN TOP */
+
 .main-top {
   width: 98%;
-  height: 380px;
+  min-height: 380px;
+  height: auto;
   margin: 20px auto;
   border-radius: 30px;
 
@@ -146,14 +154,18 @@ a {
 
 .yazilar {
   width: auto;
-  margin-top: 40px;
+  margin-top: 35px;
   margin-left: 70px;
+  position: relative;
+  z-index: 2;
 }
 
 .yazilar-top {
   display: flex;
   align-items: center;
   width: max-content;
+  max-width: 90%;
+  flex-wrap: wrap;
 }
 
 .yazilar-top h1 {
@@ -169,42 +181,34 @@ a {
 }
 
 .yazilar-bottom h4 {
-  margin: 0;
+  margin: 8px 0 0;
   font-size: 16px;
   font-weight: normal;
 }
 
+/* BİLET AL */
+
 .bilet-al {
-  position: absolute;
-  left: 6%;
-  right: 6%;
-  bottom: 20px;
+  position: relative;
+  margin: 20px 6% 0;
 
   background-color: white;
   border-radius: 20px;
   padding: 0 20px 15px;
 
   box-sizing: border-box;
-}
-.bilet-al {
-  position: absolute;
-  left: 6%;
-  right: 6%;
-  bottom: 20px;
-
-  background-color: white;
-  border-radius: 20px;
-  padding: 0 20px 15px;
-
-  box-sizing: border-box;
+  z-index: 3;
 }
 
 .ucus-tipi {
   display: flex;
   align-items: center;
   gap: 25px;
+  flex-wrap: wrap;
 
-  height: 50px;
+  height: auto;
+  min-height: 50px;
+
   border-bottom: 1px solid #eee;
 }
 
@@ -213,101 +217,6 @@ a {
   border: none;
   background-color: transparent;
   font-weight: bold;
-}
-
-.form {
-  display: flex;
-  width: 100%;
-  gap: 8px;
-  margin-top: 15px;
-}
-
-.form-alan {
-  flex: 1;
-
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  padding: 10px;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  background-color: white;
-
-  box-sizing: border-box;
-}
-
-.form-icon {
-  color: purple;
-  font-size: 18px;
-}
-
-.form-icerik {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-}
-
-.form-icerik label {
-  font-size: 12px;
-  color: grey;
-  font-weight: normal;
-}
-
-.form-icerik input {
-  border: none;
-  outline: none;
-  font-size: 14px;
-  font-weight: bold;
-  width: 100%;
-}
-
-.form-alt {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-top: 10px;
-}
-
-.esnek {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-}
-
-.ucus-ara {
-  border: none;
-  background-color: purple;
-  color: white;
-
-  padding: 12px 35px;
-  border-radius: 10px;
-
-  font-weight: bold;
-}
-
-.ucus-tipi {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-
-  height: 50px;
-  border-bottom: 1px solid #eee;
-}
-
-.ucus-tipi button {
-  height: 100%;
-  border: none;
-  background-color: transparent;
-  font-weight: bold;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  cursor: pointer;
 }
 
 .ucus-btn {
@@ -322,20 +231,107 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: purple;
 }
 
+/* FORM */
+
+.form {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  margin-top: 15px;
+  flex-wrap: nowrap;
+}
+
+.form-alan {
+  flex: 1 1 180px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: white;
+
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.form-icon {
+  color: purple;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.form-icerik {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  width: 100%;
+}
+
+.form-icerik label {
+  font-size: 12px;
+  color: grey;
+  font-weight: normal;
+}
+
+.form-icerik input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  min-width: 0;
+}
+
+.form-alt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.esnek {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.ucus-ara {
+  border: none;
+  background-color: purple;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
 .main-mid {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   justify-content: space-around;
+  flex-wrap: nowrap;
+  gap: 20px;
   margin: 0 50px;
   height: auto;
 }
+
 .kart1 {
   background-color: white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-
   width: 25%;
   padding: 0;
 }
@@ -348,10 +344,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   align-items: center;
   margin: 5px 10px;
 }
+
 .kart-baslik,
 .advantages-baslik {
   margin: 10px;
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .kart-btn {
@@ -364,16 +361,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin: 0;
   padding: 0;
 }
+
 .destinasyonlar-img {
-  width: 80px;
-  height: 80px;
+  width: 55px;
+  height: 55px;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 li {
   display: flex;
   flex-direction: row;
   margin: 5px 0;
-
   justify-content: space-between;
   align-items: center;
 }
@@ -383,13 +382,13 @@ li {
   flex-direction: row;
   margin: 5px;
   gap: 10px;
-  padding: 8px;
+  padding: 5px;
 }
 
 .aciklama {
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 5px;
   padding: 5px;
   gap: 5px;
 }
@@ -401,7 +400,7 @@ li {
 .ucret {
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 5px;
   padding: 5px;
   gap: 5px;
 }
@@ -414,6 +413,8 @@ li {
   font-weight: bolder;
 }
 
+/* KART 2 */
+
 .kart2 {
   display: flex;
   background-color: white;
@@ -422,22 +423,26 @@ li {
   justify-content: space-between;
 
   width: 40%;
-  padding: 30px;
+  padding: 20px;
+
   background-image: url("images/kart2-pic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
+
 .kart2-top-sol {
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .kart2-baslik {
   color: white;
   font-weight: 900;
-  font-size: 40px;
-  margin: 10px 0px;
+  font-size: 28px;
+  margin: 10px 0;
   padding: 3px;
 }
 
@@ -445,11 +450,13 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .kart2-ikons {
   color: white;
-  margin: 15px;
+  margin: 10px;
 }
 
 .reklam {
@@ -459,17 +466,19 @@ li {
   margin: 0;
   padding: 0;
 }
+
 .kart2-top-span {
-  font-size: 27px;
+  font-size: 16px;
 }
 
 .kart2-btn1 {
   background-color: purple;
   color: white;
-  width: 230px;
-  height: 40px;
+  width: 150px;
+  max-width: 100%;
+  height: 32px;
   border-radius: 30px;
-  margin: 30px 0;
+  margin: 15px 0;
 }
 
 .fiyat-etiketi {
@@ -480,39 +489,45 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 20px;
-  padding: 30px;
+  gap: 8px;
+  padding: 10px;
 }
 
 .kart2-fyt {
   color: white;
-  font-size: 35px;
+  font-size: 24px;
 }
 
 .kart2-btn2 {
   color: black;
   background-color: white;
   height: 40px;
-  width: 150px;
+  width: 130px;
+
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
+
   gap: 5px;
   border-radius: 10px;
 }
+
+/* KART 3 */
 
 .kart3 {
   background-color: white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+
   width: 25%;
 }
 
 .kart3-img {
-  width: 60px;
-  height: 70px;
+  width: 45px;
+  height: 50px;
+  object-fit: contain;
 }
 
 .kart3-liste {
@@ -533,6 +548,7 @@ li {
 
 .kart3-tarih-tip {
   color: grey;
+  font-size: 12px;
 }
 
 .kart3-fiyat {
@@ -541,27 +557,30 @@ li {
 }
 
 .kart3-icerik {
-  margin-top: 15px;
+  margin-top: 5px;
 }
+
+/* AVANTAJLAR */
 
 .main-advantages {
   display: flex;
-  margin: 0 60px;
+  margin: 15px 60px 0;
+  position: relative;
+  z-index: 2;
 }
-
 .advantages-ul {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   width: 100%;
   margin: 10px 20px;
   padding: 0;
   background-color: white;
-  border: 2px solid saddlebrown;
+  border-radius: 10px;
 }
 
 .advantages-ul li {
-  flex: 1;
-  border: 2px solid saddlebrown;
+  flex: 1 1 200px;
 }
 
 .advantages-icon {
@@ -575,15 +594,16 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  border: 2px solid saddlebrown;
+  justify-content: flex-start;
   margin: auto;
-  gap: 1px;
+  gap: 8px;
+  padding: 10px;
 }
 
 .advantages-metin {
   color: grey;
   padding: 0;
+  font-size: 12px;
 }
 
 .advantages-aciklama {
@@ -594,30 +614,115 @@ li {
 
 .advantages-baslik {
   display: block;
-  line-height: 0.9;
+  line-height: 1;
   margin: 0;
 }
+
 .havayolu_links {
-  width: 290px;
-  height: 60px;
+  width: 130px;
+  height: 55px;
   object-fit: contain;
-  border: 2px solid saddlebrown;
   background-color: white;
 }
-
 .main-airlines {
-  border: 2px solid saddlebrown;
   background-color: white;
   margin: 10px 80px;
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  gap: 10px;
   width: auto;
-  padding: 5px 0;
+  padding: 10px;
 }
 
 .main-airlines a {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .main-mid {
+    margin: 0 20px;
+    height: auto;
+  }
+
+  .kart1,
+  .kart2,
+  .kart3 {
+    width: 100%;
+  }
+
+  .main-advantages,
+  .main-airlines {
+    margin: 10px 20px;
+  }
+
+  .main-airlines {
+    flex-wrap: wrap;
+  }
+}
+
+/* MOBİL */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navbar-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .yazilar {
+    margin-left: 20px;
+  }
+
+  .yazilar-top h1 {
+    white-space: normal;
+    font-size: 22px;
+  }
+
+  .bilet-al {
+    margin: 20px 4% 0;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .form-alan {
+    flex: 1 1 auto;
+  }
+
+  .main-mid {
+    height: auto;
+  }
+
+  .kart2-baslik {
+    font-size: 28px;
+  }
+
+  .advantages-ul {
+    flex-direction: column;
+  }
+
+  .main-airlines {
+    flex-wrap: wrap;
+  }
+
+  .havayolu_links {
+    width: 140px;
+  }
 }
