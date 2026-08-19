@@ -129,7 +129,7 @@
                     <option value="Londra (LHR)"></option>
                     <option value="Dubai (DXB)"></option>
                   </datalist>
-                  <input type="text" id="nereye" placeholder="Paris (CDG)" />
+                  <input type="text" id="nereye" />
                 </div>
               </div>
 
@@ -159,8 +159,15 @@
                   <input
                     type="text"
                     id="yolcu"
-                    placeholder="1 Yolcu, Ekonomi"
+                    list="yolcular"
+                    placeholder="Yolcu Seçiiniz"
                   />
+
+                  <datalist id="yolcular">
+                    <option value="Ekomomi"></option>
+                    <option value="Business"></option>
+                    <option value="Öğrenci"></option>
+                  </datalist>
                 </div>
               </div>
             </div>

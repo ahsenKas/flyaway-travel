@@ -6,3 +6,14 @@ butonlar.forEach((buton) => {
     buton.classList.add("active");
   });
 });
+const menuOgeleri = document.querySelectorAll(".nav-links .liste");
+
+menuOgeleri.forEach(function (menu) {
+  menu.addEventListener("click", function () {
+    menuOgeleri.forEach(function (item) {
+      item.classList.remove("active");
+    });
+
+    menu.classList.add("active");
+  });
+});

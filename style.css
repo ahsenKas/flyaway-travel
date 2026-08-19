@@ -10,20 +10,29 @@
   display: flex;
   border: 2px solid brown;
   justify-content: space-between;
+  padding: 10px 30px;
+  background-color: white;
+  box-sizing: border-box;
 }
 
 .navbar-left {
   display: flex;
-  justify-content: space-between;
-  width: 50%;
   align-items: center;
-  margin: 15px;
+  gap: 60px;
+
+  margin: 0;
 }
 
 .logo {
   transform: rotate(-50deg);
   color: blue;
-  font-size: 40px;
+  font-size: 30px;
+}
+
+.firma {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .firma_adi {
@@ -32,25 +41,48 @@
 }
 
 .navbar-mid {
-  width: 70%;
-  height: 100%;
-}
-.nav-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70%;
+  width: auto;
+  height: auto;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 0;
+  padding: 0;
+}
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+.nav-links .liste a {
+  display: flex;
+  align-items: center;
+
+  padding: 10px 14px;
+
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+
+  border-radius: 8px;
+}
 .liste.active {
-  background-color: rgb(228, 224, 219);
-  border-bottom: 2px solid blue;
+  background-color: #f1eafa;
+  border-bottom: 2px solid purple;
+}
+
+.nav-links .liste.active a {
+  color: purple;
+  background-color: #f1eafa;
+}
+
+.nav-links .liste.active {
+  border-bottom: 2px solid purple;
 }
 a {
   text-decoration: none;
@@ -63,24 +95,37 @@ a {
 }
 
 .navbar-right {
-  width: 20%;
+  width: auto;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  font-size: 20px;
+  gap: 25px;
+
+  padding: 0;
+  font-size: 17px;
+}
+
+.diller {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .kullanici {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
+
   border: 2px solid purple;
   border-radius: 50%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: white;
   background-color: purple;
+
+  font-size: 13px;
 }
 
 .main-top {
@@ -100,39 +145,35 @@ a {
 }
 
 .yazilar {
-  display: flex;
-  flex-direction: column;
-
-  width: 350px;
+  width: auto;
   margin-top: 40px;
   margin-left: 70px;
-
-  gap: 5px;
-  border: 2px solid greenyellow;
 }
 
 .yazilar-top {
   display: flex;
-  flex-direction: row;
-  display: flex;
   align-items: center;
+  width: max-content;
 }
 
 .yazilar-top h1 {
-  font-size: 36px;
   margin: 0;
+  white-space: nowrap;
 }
+
+.mini_logo {
+  transform: rotate(-50deg);
+  color: blue;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
 .yazilar-bottom h4 {
   margin: 0;
   font-size: 16px;
   font-weight: normal;
 }
 
-.mini_logo {
-  transform: rotate(-50deg);
-  color: blue;
-  font-size: 30px;
-}
 .bilet-al {
   position: absolute;
   left: 6%;
@@ -365,6 +406,10 @@ li {
   gap: 5px;
 }
 
+.euro_birimi::before {
+  content: "€";
+}
+
 .euro_birimi {
   font-weight: bolder;
 }
@@ -492,6 +537,7 @@ li {
 
 .kart3-fiyat {
   color: purple;
+  font-weight: bolder;
 }
 
 .kart3-icerik {
