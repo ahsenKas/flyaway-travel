@@ -136,7 +136,7 @@ a {
 }
 
 .main-top {
-  width: 97%;
+  width: 99%;
   height: 39vh;
   min-height: 280px;
   margin: 12px auto 10px;
@@ -314,7 +314,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   justify-content: space-between;
   flex-wrap: nowrap;
   gap: 18px;
-  margin: 0 5%;
+  margin: 0 1%;
   height: 29vh;
   min-height: 215px;
   flex-shrink: 0;
@@ -583,7 +583,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: flex;
   height: 9vh;
   min-height: 58px;
-  margin: 10px 5% 0;
+  margin: 10px 1% 0;
   flex-shrink: 0;
 }
 
@@ -652,7 +652,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   min-height: 52px;
   border-radius: 10px;
   background-color: white;
-  margin: 10px 5% 0;
+  margin: 10px 1% 0;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
